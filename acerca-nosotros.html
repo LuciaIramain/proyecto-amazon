@@ -1,150 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amazon Prime Netflix</title>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-      integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/styles2.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md d-print-block justify-content-center fixed-top">
-        <a class="navbar-brand navbar-brand d-flex mr-auto margen-logo" href="index.html">Amazon Prime</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="acerca-nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Ingresar
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="#modalLogin" data-bs-toggle="modal">Login</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Registrate</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Busca tu pelicula" aria-label="Search" />
-            <button class="btn btn-outline-danger buscar" type="submit">
-              Buscar
-            </button>
-          </form>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Prime Netflix</title>
 
-    <main>
-<div class="container info">
-        <h1>¿Quienes Somos?</h1>
-        <p>
-          Somos la plataforma de Streaming #1 en Latinoamérica, capacidad
-          ilimitada de usuarios y la mejor calidad de transmisión 4K y Full HD
-          en vivo. Disfruta desde la web o con la aplicación de Prime Video en
-          tu teléfono, tablet o ciertos Smart TV en hasta 3 dispositivos al
-          mismo tiempo.
-        </p>
-        <h4>Nuestro equipo de desarroladores</h4>
-        <p>Trabajamos para darte la mejor experiencia en streaming, nos encontramos desarrollando nuevas tecnologias para que puedas disfrutar de todos los estrenos en alta calidad y sin interrupciones</p>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles2.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md d-print-block justify-content-center fixed-top">
+      <a class="navbar-brand navbar-brand d-flex mr-auto margen-logo" href="index.html">Amazon Prime</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="acerca-nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Ingresar
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="#modalLogin" data-bs-toggle="modal">Login</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Registrate</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Busca tu pelicula" aria-label="Search" />
+          <button class="btn btn-outline-danger buscar" type="submit">
+            Buscar
+          </button>
+        </form>
       </div>
-      <div class="container cards">
-        <div class="card" style="width: 18rem;">
-          <img src="img/nosotros/german.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">German Matias Medina <br> Programador Full Stack</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="img/nosotros/luci.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Lucia Iramain <br> Programadora Full Stack</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="img/nosotros/gero.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Geronimo Lagarrigue <br> Programador Full Stack</p>
-          </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container info">
+      <h1>¿Quienes Somos?</h1>
+      <p>
+        Somos la plataforma de Streaming #1 en Latinoamérica, capacidad
+        ilimitada de usuarios y la mejor calidad de transmisión 4K y Full HD
+        en vivo. Disfruta desde la web o con la aplicación de Prime Video en
+        tu teléfono, tablet o ciertos Smart TV en hasta 3 dispositivos al
+        mismo tiempo.
+      </p>
+      <h4>Nuestro equipo de desarroladores</h4>
+      <p>Trabajamos para darte la mejor experiencia en streaming, nos encontramos desarrollando nuevas tecnologias para
+        que puedas disfrutar de todos los estrenos en alta calidad y sin interrupciones</p>
+    </div>
+    <div class="container cards">
+      <div class="card" style="width: 18rem;">
+        <img src="img/nosotros/german.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">German Matias Medina <br> Programador Full Stack</p>
         </div>
       </div>
-    </main>
-
-
-    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="loginModalLabel">Inicia sesión</h4>
-            <img src="https://www.nevistas.com/ul/4/2018/11/30/10.jpg" alt="Logo de Prime Video" class="w-25 ms-5" />
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form class="my-3 mx-2">
-              <div>
-                <label class="form-label" for="codigoProducto"></label>
-                <input type="text" id="usuario" class="form-control" placeholder="Usuario o email"
-                  onblur="validarCampoRequerido(this)" required />
-                <div class="valid-feedback"></div>
-                <div class="invalid-feedback">
-                  Ingrese el nombre de usuario o email.
-                </div>
-              </div>
-              <div class="mb-4">
-                <label class="form-label" for="nombreProducto"></label>
-                <input type="password" id="contrasenia" class="form-control" placeholder="Contraseña"
-                  onblur="validarCampoRequerido(this)" required />
-                <div class="valid-feedback"></div>
-                <div class="invalid-feedback">Ingrese su contraseña.</div>
-              </div>
-              <button class="btn btnLogin w-100" type="submit">
-                Iniciar Sesión
-              </button>
-              <div class="my-3 row">
-                <div class="col-6">
-                  <input type="checkbox" id="recuerdame" onblur="validarCampoRequerido(this)" />
-                  <label for="recuerdame"> Recuérdame</label>
-                </div>
-                <div class="col-6 d-flex justify-content-end">
-                  <a href="#modalContrasenia" data-bs-toggle="modal" class="text-secondary">¿Has olvidado la
-                    contraseña?</a>
-                </div>
-              </div>
-            </form>
-            <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
-          </div>
-          <div class="modal-footer"></div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/nosotros/luci.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Lucia Iramain <br> Programadora Full Stack</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/nosotros/gero.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Geronimo Lagarrigue <br> Programador Full Stack</p>
         </div>
       </div>
     </div>
+  </main>
 
-     <footer class="footer-distributed">
+
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="loginModalLabel">Inicia sesión</h4>
+          <img src="https://www.nevistas.com/ul/4/2018/11/30/10.jpg" alt="Logo de Prime Video" class="w-25 ms-5" />
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="my-3 mx-2">
+            <div>
+              <label class="form-label" for="codigoProducto"></label>
+              <input type="text" id="usuario" class="form-control" placeholder="Usuario o email"
+                onblur="validarCampoRequerido(this)" required />
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese el nombre de usuario o email.
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label" for="nombreProducto"></label>
+              <input type="password" id="contrasenia" class="form-control" placeholder="Contraseña"
+                onblur="validarCampoRequerido(this)" required />
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">Ingrese su contraseña.</div>
+            </div>
+            <button class="btn btnLogin w-100" type="submit">
+              Iniciar Sesión
+            </button>
+            <div class="my-3 row">
+              <div class="col-6">
+                <input type="checkbox" id="recuerdame" onblur="validarCampoRequerido(this)" />
+                <label for="recuerdame"> Recuérdame</label>
+              </div>
+              <div class="col-6 d-flex justify-content-end">
+                <a href="#modalContrasenia" data-bs-toggle="modal" class="text-secondary">¿Has olvidado la
+                  contraseña?</a>
+              </div>
+            </div>
+          </form>
+          <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="registroModalLabel">Registrate en</h4>
+          <img src="img/prime-video.png" alt="Logo de Prime Video" class="w-25 ms-4">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="validarGeneralRegistro(event)" class="my-3 mx-2" id="formRegistro">
+            <div class="mb-3">
+              <label class="form-label" for="nombreR">Nombre y Apellido</label>
+              <input type="text" id="nombreR" class="form-control" placeholder="Ingrese su nombre y apellido"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese el nombre y apellido.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="mailR">Email</label>
+              <input type="email" id="mailR" class="form-control" placeholder="Ingrese su email"
+                onblur="validarMail(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese su email.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="telefonoR">N° de telefono</label>
+              <input type="tel" id="telefonoR" class="form-control" placeholder="Ingrese su número de telefono"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese su número de telefono.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="usuarioR">Nombre de Usuario</label>
+              <input type="text" id="usuarioR" class="form-control" placeholder="Ingrese su nombre de usuario"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese el nombre de usuario.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="contraseniaR">Contraseña</label>
+              <input type="password" id="contraseniaR" class="form-control" placeholder="Ingrese su contraseña"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese su contraseña.
+              </div>
+            </div>
+            <button class="btn btnLogin w-100" type="submit">Registrarse</button>
+          </form>
+          <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-distributed">
     <div class="footer-left">
       <h3>Amazon<span>Prime</span></h3>
 
@@ -199,10 +259,8 @@
     </div>
   </footer>
 
-    <script src="js/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0fd0a55384.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/0fd0a55384.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
