@@ -106,7 +106,7 @@ function dibujarPeli() {
       }
 
       informacionPeli = `<div class="pelicula" >
-              <a href="detallePelicula.html"><img src="img/peliculas/${listaPeli[i].imagen}" alt=""/></a>
+              <a href="detallePelicula.html"><img src="img/peliculas/${listaPeli[i].imagen}" alt="imagen pelicula recomendada"/></a>
       </div>`;
       // agregar las columnas a la fila
       filaGrilla.innerHTML += informacionPeli;
