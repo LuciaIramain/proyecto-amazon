@@ -1,4 +1,4 @@
-# Sitio de stream Amazon Prime
+# Sitio de streaming Amazon Prime
 
 _Descripcion del proyecto. Esto es una plataforma de streaming de peliculas y series N°1 de latinoamerica._
 
