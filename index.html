@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Gerónimo Lagarrigue, Lucía Iramain, German Matias Medina">
+  <meta name="description"
+    content="Bienvenidos a Amazon Prime Video, sitio de streaming de las mejores peliculas y series.">
+  <meta name="keywords" content="streaming, peliculas, prime video, series">
+  <title>Amazon Prime</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles2.css" />
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md d-print-block justify-content-center fixed-top">
+      <a class="navbar-brand navbar-brand d-flex mr-auto margen-logo" href="index.html">Amazon Prime</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="acerca-nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Ingresar
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="#modalLogin" data-bs-toggle="modal">Login</a>
+              </li>
+              <li><a class="dropdown-item" href="#modalRegistro" data-bs-toggle="modal">Registrate</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Busca tu pelicula" aria-label="Search" />
+          <button class="btn btn-outline-danger buscar" type="submit">
+            Buscar
+          </button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <video preload="auto" loop autoplay muted class="imagen-video w-100">
+        <source src="img/movie.mp4" type="video/mp4">
+      </video>
+      <div class="container detalle">
+        <h1 class="titulo-video">LOKI</h1>
+        <p class="fw-bold parrafo-video">'Loki', seguirá al Dios del Engaño<br> a lo largo de varios momentos en el
+          tiempo.<br>La última vez que le vimos fue en 'Vengadores: Endgame' </p>
+        <button class="btn btn-outline-danger botones-video fw-bold"><i class="fas fa-play"></i>
+          Reproducir</button>
+        <button class="btn btn-outline-danger  botones-video" title="Agregar a Mi lista"><i
+            class="fas fa-plus"></i></button>
+        <button class="btn btn-outline-danger   botones-video" title="Me gusta"><i
+            class="far fa-thumbs-up"></i></button>
+        <button class="btn btn-outline-danger   botones-video" title="No es para mí"><i
+            class="far fa-thumbs-down"></i></button>
+      </div>
+    </article>
+    <section>
+      <div class="peliculas-recomendadas contenedor" id="contenedor-principal-1">
+        <div class="contenedor-titulo-controles">
+          <h3>Películas de Acción</h3>
+          <div class="indicadores"></div>
+        </div>
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="contenedor-carousel">
+            <div class="carousel" id="detallePelicula">
+              
+              
+          </div>
+
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="peliculas-recomendadas contenedor" id="contenedor-principal-2">
+        <div class="contenedor-titulo-controles">
+          <h3>Películas de Comedia</h3>
+          <div class="indicadores"></div>
+        </div>
+        <div class="contenedor-principal" ">
+            <button role=" button" id="flecha-izquierda" class="flecha-izquierda"><i
+            class="fas fa-angle-left"></i></button>
+          <div class="contenedor-carousel">
+            <div class="carousel">
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/american-pie.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/naked-gun.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/sex-tape.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/some-hot.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/ted.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-gold.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-lego.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-mask.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-simpsons.png" alt=""></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-sisterhood.png" alt=""></a>
+              </div>
+
+            </div>
+          </div>
+          <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+
+      <div class="peliculas-recomendadas contenedor" id="contenedor-principal-3">
+        <div class="contenedor-titulo-controles">
+          <h3>Películas de Romance</h3>
+          <div class="indicadores"></div>
+        </div>
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="contenedor-carousel">
+            <div class="carousel">
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/adult-world.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/blue-warm.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/deep-blue.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/golden-eye.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/now-is-good.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/ten-rules.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/titanic.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-notebook.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/good-company.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/good-year.png" alt="" /></a>
+              </div>
+
+            </div>
+          </div>
+
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="peliculas-recomendadas contenedor" id="contenedor-principal-4">
+        <div class="contenedor-titulo-controles">
+          <h3>Películas de Terror</h3>
+          <div class="indicadores"></div>
+        </div>
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="contenedor-carousel">
+            <div class="carousel">
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/down-dead.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/frankenstein.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/house-street.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/lucy.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/scary-movie.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-cabin.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-deaths.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-exorcism.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/the-nightmare.png" alt="" /></a>
+              </div>
+              <div class="pelicula">
+                <a href="error404.html"><img src="img/peliculas/lucy.png" alt="" /></a>
+              </div>
+
+            </div>
+          </div>
+
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="loginModalLabel">Inicia sesión</h4>
+                <img src="img/prime-video.png" alt="Logo de Prime Video" class="w-25 ms-5">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="validarGeneralLogin(event)" class="my-3 mx-2">
+                    <div>
+                        <label class="form-label" for="usu"></label>
+                        <input type="text" id="usu" class="form-control" placeholder="Usuario o email"
+                            onblur="validarCampoRequerido(this)" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">
+                            Ingrese el nombre de usuario o email.
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="contra"></label>
+                        <input type="password" id="contra" class="form-control" placeholder="Contraseña"
+                            onblur="validarCampoRequerido(this)" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">
+                            Ingrese su contraseña.
+                        </div>
+                    </div>
+                    <a class="btn btnLogin w-100" href="admin.html">Iniciar Sesión</a>
+                    <div class="my-3 row">
+                        <div class="col-6">
+                            <input type="checkbox" id="checkRecuerdame">
+                            <label for="checkRecuerdame"> Recuérdame</label>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <a href="recuperarContrasenia.html" class="text-secondary">¿Has olvidado
+                                la contraseña?</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- Modal Registro -->
+  <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="registroModalLabel">Registrate en</h4>
+          <img src="img/prime-video.png" alt="Logo de Prime Video" class="w-25 ms-4">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="validarGeneralRegistro(event)" class="my-3 mx-2" id="formRegistro">
+            <div class="mb-3">
+              <label class="form-label" for="nombreR">Nombre y Apellido</label>
+              <input type="text" id="nombreR" class="form-control" placeholder="Ingrese su nombre y apellido"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese el nombre y apellido.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="mailR">Email</label>
+              <input type="email" id="mailR" class="form-control" placeholder="Ingrese su email"
+                onblur="validarMail(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese su email.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="telefonoR">N° de telefono</label>
+              <input type="tel" id="telefonoR" class="form-control" placeholder="Ingrese su número de telefono"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese su número de telefono.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="usuarioR">Nombre de Usuario</label>
+              <input type="text" id="usuarioR" class="form-control" placeholder="Ingrese su nombre de usuario"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese el nombre de usuario.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="contraseniaR">Contraseña</label>
+              <input type="password" id="contraseniaR" class="form-control" placeholder="Ingrese su contraseña"
+                onblur="validarCampoRequerido(this)" required>
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback">
+                Ingrese su contraseña.
+              </div>
+            </div>
+            <button class="btn btnLogin w-100" type="submit">Registrarse</button>
+          </form>
+          <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Amazon<span>Prime</span></h3>
+
+      <p class="footer-links">
+        <a href="index.html">Inicio</a>
+        ·
+        <a href="#">Contacto</a>
+        ·
+        <a href="acerca-nosotros.html">Acerca de Nosotros</a>
+        ·
+        <a href="#modalLogin" data-bs-toggle="modal">Login</a>
+        ·
+        <a href="#">Registrate</a>
+        ·
+      </p>
+
+      <p class="footer-company-name">amazonprime &copy; 2019</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>San Miguel</span> Tucuman, Argentina</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+54 0381 156666666</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p>
+          <a href="mailto:support@company.com">contact@amazonprime.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Sobre Nosotros</span>
+        Amazon Prime es la mejor plataforma para ver tus peliculas y series
+        favoritas
+      </p>
+
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="https://kit.fontawesome.com/0fd0a55384.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

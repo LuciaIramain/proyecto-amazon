@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gerónimo Lagarrigue, Lucía Iramain, German Matias Medina">
+    <meta name="description"
+        content="Bienvenidos a Amazon Prime Video, sitio de streaming de las mejores peliculas y series.">
+    <meta name="keywords" content="streaming, peliculas, prime video, series">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles2.css">
+    <script src="https://kit.fontawesome.com/6aed07874e.js" crossorigin="anonymous"></script>
+    <title>Prime Video</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_qvGsOE4BFhYiNrMbJ4tYu");
+    })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.2/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-md d-print-block justify-content-center fixed-top">
+          <a class="navbar-brand navbar-brand d-flex mr-auto margen-logo" href="index.html">Amazon Prime</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="acerca-nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Ingresar
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#modalLogin" data-bs-toggle="modal">Login</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#modalRegistro" data-bs-toggle="modal">Registrate</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Busca tu pelicula" aria-label="Search" />
+              <button class="btn btn-outline-danger buscar" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </nav>
+      </header>
+    <main class="container mb-5">
+        <h1 class="margenContacto text-center">Comunícate con el Servicio al Cliente</h1>
+        <section class="row">
+            <article class="col-sm-12 col-md-6">
+                <form onsubmit="validarGeneralContacto(event)" id="formContacto">
+                    <div class="mb-3">
+                        <label class="form-label" for="nombreCon">Nombre y Apellido</label>
+                        <input type="text" id="nombreCon" class="form-control w-75" onblur="validarCampoRequeridoContacto(this)"
+                            required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">
+                            Ingrese el nombre y apellido.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="mailCon">Email</label>
+                        <input type="email" id="mailCon" class="form-control w-75" onblur="validarMailContacto(this)" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">
+                            Ingrese un email.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="consulta">Consulta</label>
+                        <textarea name="consul" id="consulta" class="form-control w-75" cols="30" rows="5"
+                            onblur="validarConsulta(this)" required></textarea>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">
+                            Ingrese su consulta.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkContacto">
+                        <input type="checkbox" id="checkContacto">
+                         ¿Desea recibir un email con los datos enviados?</label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </form>
+                <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
+            </article>
+            <article class="col-sm-12 col-md-6" class="preguntasFrecuentes">
+                <div>
+                    <h5>Preguntas frecuentes</h5>
+                    <ul>
+                        <li><a href="error404.html" class="aContacto">¿Cómo puedo reestablecer mi contraseña?</a></li>
+                        <li><a href="error404.html" class="aContacto">¿Cómo cancelo mi cuenta?</a></li>
+                        <li><a href="error404.html" class="aContacto">¿Por qué no funciona Prime Video?</a></li>
+                        <li><a href="error404.html" class="aContacto">¿Qué es Prime video?</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Encuentra otra respuesta</h5>
+                    <div class="input-group tamañoInput">
+                        <span class="input-group-text" id="basic-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                </path>
+                            </svg>
+                        </span>
+                        <input type="text" class="form-control" placeholder="¿En que podemos ayudarte?"
+                            aria-label="Input group example" aria-describedby="basic-addon1"/>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h5>Descargate nuestra aplicacion Prime Video</h5>
+                    <article>
+                        <a href="https://www.apple.com/la/app-store/" target="_blank"><img
+                                src="img/badge-apple-store.svg" alt="apple store" class="imgRedesSociales"/></a>
+                        <a href="https://play.google.com/store?hl=es-419
+                       " target="_blank">
+                            <img src="img/google-play-badge-bb.svg" alt="google play store" class="imgRedesSociales"/></a>
+                    </article>
+                </div>
+
+            </article>
+        </section>
+    </main>
+    <!-- Modal Iniciar Sesión -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="loginModalLabel">Inicia sesión</h4>
+                    <img src="img/prime-video.png" alt="Logo de Prime Video" class="w-25 ms-5">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="validarGeneralLogin(event)" class="my-3 mx-2">
+                        <div>
+                            <label class="form-label" for="usu"></label>
+                            <input type="text" id="usu" class="form-control" placeholder="Usuario o email"
+                                onblur="validarCampoRequerido(this)" required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">
+                                Ingrese el nombre de usuario o email.
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="contra"></label>
+                            <input type="password" id="contra" class="form-control" placeholder="Contraseña"
+                                onblur="validarCampoRequerido(this)" required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">
+                                Ingrese su contraseña.
+                            </div>
+                        </div>
+                        <button class="btn btnLogin w-100" type="submit">Iniciar Sesión</button>
+                        <div class="my-3 row">
+                            <div class="col-6">
+                                <input type="checkbox" id="checkRecuerdame">
+                                <label for="checkRecuerdame"> Recuérdame</label>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <a href="recuperarContrasenia.html" class="text-secondary">¿Has olvidado
+                                    la contraseña?</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Modal Registro -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="registroModalLabel">Registrate en</h4>
+                    <img src="img/prime-video.png" alt="Logo de Prime Video" class="w-25 ms-4">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="validarGeneralRegistro(event)" class="my-3 mx-2" id="formRegistro">
+                        <div class="mb-3">
+                            <label class="form-label" for="nombreR">Nombre y Apellido</label>
+                            <input type="text" id="nombreR" class="form-control" placeholder="Ingrese su nombre y apellido"
+                                onblur="validarCampoRequerido(this)" required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">
+                                Ingrese el nombre y apellido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="mailR">Email</label>
+                            <input type="email" id="mailR" class="form-control" placeholder="Ingrese su email"
+                                onblur="validarMail(this)" required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">
+                                Ingrese su email.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="telefonoR">N° de telefono</label>
+                            <input type="tel" id="telefonoR" class="form-control" placeholder="Ingrese su número de telefono"
+                                onblur="validarCampoRequerido(this)" required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">
+                                Ingrese su número de telefono.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="usuarioR">Nombre de Usuario</label>
+                            <input type="text" id="usuarioR" class="form-control" placeholder="Ingrese su nombre de usuario"
+                                onblur="validarCampoRequerido(this)" required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">
+                                Ingrese el nombre de usuario.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="contraseniaR">Contraseña</label>
+                            <input type="password" id="contraseniaR" class="form-control" placeholder="Ingrese su contraseña"
+                                onblur="validarCampoRequerido(this)" required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">
+                                Ingrese su contraseña.
+                            </div>
+                        </div>
+                        <button class="btn btnLogin w-100" type="submit">Registrarse</button>
+                    </form>
+                    <div class="alert alert-success d-none" id="mensajeEnvio" role="alert"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Amazon<span>Prime</span></h3>
+            <p class="footer-links">
+                <a href="index.html">Inicio</a>
+                ·
+                <a href="contacto.html">Contacto</a>
+                ·
+                <a href="#">Acerca de Nosotros</a>
+                ·
+                <a href="#modalLogin" data-bs-toggle="modal">Login</a>
+                ·
+                <a href="#modalRegistro" data-bs-toggle="modal">Registrate</a>
+                ·
+            </p>
+            <p class="footer-company-name">amazonprime &copy; 2019</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>San Miguel</span> Tucuman, Argentina</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+54 0381 156666666</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">contact@amazonprime.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre Nosotros</span>
+                Amazon Prime es la mejor plataforma para ver tus peliculas y series favoritas
+            </p>
+            <div class="footer-icons">
+                <a href="error404.html"><i class="fa fa-facebook"></i></a>
+                <a href="error404.html"><i class="fa fa-twitter"></i></a>
+                <a href="error404.html"><i class="fa fa-linkedin"></i></a>
+                <a href="error404.html"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: var(--fondo);
+  font-family: "Bree Serif", serif;
+}
+
+html > div {
+  display: none !important;
+}
+
+.fondo {
+  background-color: #2f3846;
+}
+.btnLogin {
+  background-color: #2f3846;
+  color: #eeeeee;
+}
+
+nav {
+  top: 0;
+  height: 69px;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 5%,
+    rgba(0, 0, 0, 0)
+  ); /* background when scroll is in the top */
+  transition: all ease 0.6s; /* control how smooth the background changes */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+nav.scrolled {
+  background: rgb(0, 0, 0);
+}
+.nav-link {
+  color: #ffffff;
+  padding: 15px;
+}
+.navbar-brand {
+  color: white;
+}
+
+.navbar .nav-link{
+  padding: 15px;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.detalle {
+  position: relative;
+  bottom: 300px;
+  right: 100px;
+}
+.detalle h1 {
+  color: red;
+}
+.botones-video {
+  color: red;
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .titulo-video {
+    position: relative;
+    top: 80px;
+    left: 119px;
+  }
+  .parrafo-video {
+    top: 65px;
+    position: relative;
+    left: 117px;
+    color: white;
+  }
+
+  .botones-video {
+    position: relative;
+    top: 50px;
+    left: 114px;
+    color: red;
+    background-color: #111111;
+  }
+  .nav{
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .titulo-video {
+    position: relative;
+    top: 80px;
+    left: 119px;
+    font-size: 28px;
+  }
+  .parrafo-video {
+    top: 65px;
+    position: relative;
+    left: 120px;
+    font-size: 12px;
+  }
+
+  .botones-video {
+    position: relative;
+    top: 50px;
+    left: 114px;
+    color: red;
+    font-size: 8px;
+  }
+  .form-control, .buscar{
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .titulo-video {
+    position: relative;
+    top: 200px;
+    left: 119px;
+    font-size: 22px;
+  }
+  .parrafo-video {
+    top: 65px;
+    position: relative;
+    left: 120px;
+    font-size: 4px;
+    display: none;
+  }
+
+  .botones-video {
+    position: relative;
+    top: 200px;
+    left: 114px;
+    color: red;
+    font-size: 8px;
+    padding: 3px;
+  }
+  .navbar{
+    background-color: rgb(0, 0, 0);
+  }
+  .navbar-collapse {
+    background-color: rgb(0, 0, 0);
+}
+}
+
+@media all and (min-width: 1080px) {
+  .margen-logo {
+    margin-right: 250px;
+    margin-left: 20px;
+    color: red;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: rgb(0, 0, 0) 2px 2px 3px;
+    letter-spacing: 5px;
+  }
+}
+
+:root {
+  --rojo: #e50914;
+  --fondo: #111111;
+}
+
+.contenedor {
+  width: 95%;
+  margin: auto;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+  background: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+  background: red;
+}
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+  margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+  left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+  right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media all and (max-width: 800px) {
+  header .logotipo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pelicula-principal {
+    font-size: 14px;
+  }
+
+  .pelicula-principal .descripcion {
+    max-width: 100%;
+  }
+
+  .peliculas-recomendadas .contenedor-carousel {
+    overflow: visible;
+  }
+
+  .peliculas-recomendadas .contenedor-carousel .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .peliculas-recomendadas .indicadores,
+  .peliculas-recomendadas .flecha-izquierda,
+  .peliculas-recomendadas .flecha-derecha {
+    display: none;
+  }
+}
+
+footer {
+  position: bottom;
+  bottom: 0;
+}
+.footer-distributed {
+  background-color: #1b1c1d;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+
+  padding: 55px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Cookie", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: #e50914;
+}
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+.info h1,
+h4 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding-top: 100px;
+}
+.info p {
+  color: white;
+  text-align: center;
+  padding-top: 5x;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
